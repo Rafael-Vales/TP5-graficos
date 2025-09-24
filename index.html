@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficos de control - TP Estadistica</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        
+        header {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        
+        .header-pill {
+            background-color: #66bde2; 
+            padding: 15px 40px;
+            border-radius: 20px; 
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+            width: 80%; 
+            margin: auto; 
+        }
+
+        .header-pill h1 {
+            color: white;
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+        }
+                
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e6f2f8; 
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+
+        h1 {
+            color: #006c91;
+            margin-bottom: 20px;
+        }
+
+
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        select, button {
+            padding: 8px 12px;
+            margin: 5px;
+            border: 1px solid #b3d9ea;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #66bde2; 
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #4ca9ce;
+        }
+
+
+        #grafos, #graficos {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 20px;
+            align-items: center;
+        }
+
+
+        canvas {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            padding: 10px;
+            max-width: 1000px;
+            width: 100% !important;
+            height: 500px !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-pill">
+            <h1>TP 4 - Gráficos de Control</h1>
+        </div>
+</header>
+    <label for="caso">Seleccionar caso:</label>
+        <select id="caso">
+            <option value="1">Caso 1</option>
+            <option value="2">Caso 2</option>
+            <option value="3">Caso 3</option>
+            <option value="4">Caso 4</option>
+            <option value="5">Caso 5</option>
+        </select>
+    <button onclick="cargarDatos()">Cargar</button>
+
+        <div id="graficos" style="display: flex; flex-direction: column; gap: 40px; padding: 20px;"></div>
+
+
+        <div id="alerta"></div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
